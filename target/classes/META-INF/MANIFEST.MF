@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: raphael
+Build-Jdk: 9.0.4
+Implementation-Title: br.com.raphael.javaclient
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: br.com.raphael
+Implementation-Vendor: Pivotal Software, Inc.
+Created-By: Maven Integration for Eclipse
+
