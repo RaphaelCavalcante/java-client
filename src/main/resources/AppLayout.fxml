@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="546.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="../br.com.raphael.javaclient.controller.FXFXController">
+<VBox prefHeight="546.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.raphael.javaclient.controller.FXFXMLController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestOperations;
 
 import br.com.raphael.javaclient.model.Employee;
+import br.com.raphael.javaclient.model.EmployeeComplete;
 
 @Component
 public class EmployeeService {
@@ -18,16 +19,19 @@ public class EmployeeService {
 	public EmployeeService(@Value("${company.service.url}") final String url) {
 		this.url= url;
 	}
-	public List<Employee> getAllCompany() {
+	public List<Employee> getAllEmployee() {
 		return this.restOperations.getForObject(url, List.class);
 	}
-	public Employee createCompany() {
+	public Employee createEmployee() {
 		return this.restOperations.postForObject(url, Employee.class, null);
 	}
-	public void updateCompany(long id) {
+	public void updateEmployee(long id) {
 		this.restOperations.put(url, Employee.class, id);
 	}
-	public void deleteCompany(long id) {
+	public List<EmployeeComplete> getAllComplete() {
+		return this.restOperations.getForObject(url+"/employee/findAll", List.class);
+	}
+	public void deleteEmployee(long id) {
 		this.restOperations.delete(url+"/"+id);
 	}
 }
