@@ -1,10 +1,18 @@
 package br.com.raphael.javaclient.model;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long id;
 	private String name;
 	private String email;
-	private String phoneNum;
+	private String phone_num;
+	private long positionId;
+	
 	public long getId() {
 		return id;
 	}
@@ -24,10 +32,21 @@ public class Employee {
 		this.email = email;
 	}
 	public String getPhoneNum() {
-		return phoneNum;
+		return phone_num;
 	}
 	public void setPhoneNum(String phoneNum) {
-		this.phoneNum = phoneNum;
+		this.phone_num = phoneNum;
+	}
+	public long getPositionId() {
+		return positionId;
+	}
+	public void setPositionId(long positionId) {
+		this.positionId = positionId;
+	}
+	@Override
+	public String toString() {
+		return "{ name:" + name + ", email:" + email + ", phone_num:" + phone_num
+				+ ", position:" + positionId + "}";
 	}
 	
 	

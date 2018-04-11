@@ -14,87 +14,101 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="546.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.raphael.javaclient.controller.FXFXMLController">
-  <children>
-    <MenuBar VBox.vgrow="NEVER">
-      <menus>
-        <Menu mnemonicParsing="false" text="File">
-          <items>
-            <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open…" />
-            <Menu mnemonicParsing="false" text="Open Recent" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Close" />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save As…" />
-            <MenuItem mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Quit" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Help">
-          <items>
-            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="574.0" prefWidth="587.0" VBox.vgrow="ALWAYS">
-         <children>
-            <SplitPane dividerPositions="0.11067961165048544" orientation="VERTICAL" prefHeight="517.0" prefWidth="640.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                     <children>
-                        <Text layoutX="240.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTROLE DE PESSOAL" />
-                     </children></AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                     <children>
-                        <SplitPane dividerPositions="0.09513274336283185" orientation="VERTICAL" prefHeight="454.0" prefWidth="638.0">
-                          <items>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                 <children>
-                                    <TextField layoutX="119.0" layoutY="7.0" prefHeight="26.0" prefWidth="384.0" promptText="Filtrar" />
-                                    <Button layoutX="537.0" layoutY="7.0" mnemonicParsing="false" text="Novo" onAction="#addNew"/>
-                                    <ChoiceBox layoutX="4.0" layoutY="7.0" prefHeight="26.0" prefWidth="109.0" />
-                                 </children>
-                              </AnchorPane>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                 <children>
-                                    <TableView layoutX="55.0" prefHeight="405.0" prefWidth="527.0">
-                                      <columns>
-                                        <TableColumn prefWidth="75.0" text="#" />
-                                        <TableColumn prefWidth="75.0" text="Name" />
-                                          <TableColumn prefWidth="75.0" text="Email" />
-                                          <TableColumn prefWidth="75.0" text="Telefone" />
-                                          <TableColumn prefWidth="75.0" text="Empresa" />
-                                          <TableColumn prefWidth="75.0" text="Cargo" />
-                                      </columns>
-                                    </TableView>
-                                 </children>
-                              </AnchorPane>
-                          </items>
-                        </SplitPane>
-                     </children>
-                  </AnchorPane>
-              </items>
-            </SplitPane>
-         </children>
-    </AnchorPane>
-  </children>
+<VBox prefHeight="546.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.raphael.javaclient.controller.FXFXMLController">
+	<children>
+		<MenuBar VBox.vgrow="NEVER">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" text="New" />
+						<MenuItem mnemonicParsing="false" text="Open…" />
+						<Menu mnemonicParsing="false" text="Open Recent" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Close" />
+						<MenuItem mnemonicParsing="false" text="Save" />
+						<MenuItem mnemonicParsing="false" text="Save As…" />
+						<MenuItem mnemonicParsing="false" text="Revert" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Preferences…" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Quit" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Edit">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Undo" />
+						<MenuItem mnemonicParsing="false" text="Redo" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Cut" />
+						<MenuItem mnemonicParsing="false" text="Copy" />
+						<MenuItem mnemonicParsing="false" text="Paste" />
+						<MenuItem mnemonicParsing="false" text="Delete" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Select All" />
+						<MenuItem mnemonicParsing="false" text="Unselect All" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Help">
+					<items>
+						<MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+		<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="574.0"
+			prefWidth="587.0" VBox.vgrow="ALWAYS">
+			<children>
+				<SplitPane dividerPositions="0.11067961165048544"
+					orientation="VERTICAL" prefHeight="517.0" prefWidth="640.0">
+					<items>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0"
+							prefWidth="160.0">
+							<children>
+								<Text layoutX="240.0" layoutY="32.0" strokeType="OUTSIDE"
+									strokeWidth="0.0" text="CONTROLE DE PESSOAL" />
+							</children>
+						</AnchorPane>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0"
+							prefWidth="160.0">
+							<children>
+								<SplitPane dividerPositions="0.09513274336283185"
+									orientation="VERTICAL" prefHeight="454.0" prefWidth="638.0">
+									<items>
+										<AnchorPane minHeight="0.0" minWidth="0.0"
+											prefHeight="100.0" prefWidth="160.0">
+											<children>
+												<TextField layoutX="119.0" layoutY="7.0"
+													prefHeight="26.0" prefWidth="384.0" promptText="Filtrar" />
+												<Button layoutX="537.0" layoutY="7.0"
+													mnemonicParsing="false" text="Novo" onAction="#addNew" />
+												<ChoiceBox fx:id="filters" layoutX="4.0" layoutY="7.0"
+													prefHeight="26.0" prefWidth="109.0" />
+											</children>
+										</AnchorPane>
+										<AnchorPane minHeight="0.0" minWidth="0.0"
+											prefHeight="100.0" prefWidth="160.0">
+											<children>
+												<TableView fx:id="completeEmployeeList" layoutX="55.0"
+													prefHeight="405.0" prefWidth="527.0">
+													<columns>
+														<TableColumn fx:id="empId" prefWidth="75.0" text="#" />
+														<TableColumn fx:id="empName" prefWidth="75.0" text="Nome" />
+														<TableColumn fx:id="empEmail" prefWidth="75.0" text="Email" />
+														<TableColumn fx:id="empPhone" prefWidth="75.0" text="Telefone" />
+														<TableColumn fx:id="empCompany" prefWidth="75.0" text="Empresa" />
+														<TableColumn fx:id="empPosition" prefWidth="75.0" text="Cargo" />
+													</columns>
+												</TableView>
+											</children>
+										</AnchorPane>
+									</items>
+								</SplitPane>
+							</children>
+						</AnchorPane>
+					</items>
+				</SplitPane>
+			</children>
+		</AnchorPane>
+	</children>
 </VBox>

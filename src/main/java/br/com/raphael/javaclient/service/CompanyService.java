@@ -6,16 +6,18 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestOperations;
 
 import br.com.raphael.javaclient.model.Company;
 
-@Component
+@Service
 public class CompanyService {
 	@Autowired
 	private RestOperations restOperations;
+	
 	private String url;
+	
 	@Autowired
 	public CompanyService(@Value("${company.service.url}") final String url) {
 		this.url= url;

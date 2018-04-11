@@ -4,19 +4,20 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestOperations;
 
 import br.com.raphael.javaclient.model.Employee;
 import br.com.raphael.javaclient.model.EmployeeComplete;
 
-@Component
+@Service
 public class EmployeeService {
 	@Autowired
 	private RestOperations restOperations;
 	private String url;
+	
 	@Autowired
-	public EmployeeService(@Value("${company.service.url}") final String url) {
+	public EmployeeService(@Value("${employee.service.url}") final String url) {
 		this.url= url;
 	}
 	public List<Employee> getAllEmployee() {
@@ -29,7 +30,8 @@ public class EmployeeService {
 		this.restOperations.put(url, Employee.class, id);
 	}
 	public List<EmployeeComplete> getAllComplete() {
-		return this.restOperations.getForObject(url+"/employee/findAll", List.class);
+		List <EmployeeComplete> employeeList = this.restOperations.getForObject(url+"/findAll", List.class);
+		return employeeList;
 	}
 	public void deleteEmployee(long id) {
 		this.restOperations.delete(url+"/"+id);
